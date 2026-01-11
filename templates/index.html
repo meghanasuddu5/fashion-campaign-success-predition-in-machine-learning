@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fashion Campaign Predictor</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f7ff;
+            color: #222;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .box {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        input, select, button {
+            padding: 10px;
+            margin: 10px;
+            width: 90%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>👗 Fashion Store Campaign Predictor</h2>
+        <form action="/predict" method="post">
+            <label>Discount Offered (%)</label><br>
+            <input type="number" name="discount" min="0" max="100" required><br>
+
+            <label>Campaign Duration (Days)</label><br>
+            <input type="number" name="duration" min="1" max="60" required><br>
+
+            <label>Marketing Channel</label><br>
+            <select name="channel" required>
+                <option value="Online">Online</option>
+                <option value="Email">Email</option>
+                <option value="SMS">SMS</option>
+                <option value="In-Store">In-Store</option>
+            </select><br>
+
+            <button type="submit">Predict Success</button>
+        </form>
+
+        {% if result %}
+            <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
