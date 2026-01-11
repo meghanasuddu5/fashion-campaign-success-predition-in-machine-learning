@@ -1,3 +1,4 @@
+
 # Fashion Campaign Success Prediction using Machine Learning
 
 This project predicts the **success of fashion marketing campaigns** using machine learning. It helps businesses make **data-driven decisions** by estimating campaign performance before launch based on key parameters.
@@ -47,6 +48,9 @@ The trained model is integrated into a **Flask web application** where users can
 5. Prediction and confidence score are displayed  
 
 
+## screenshots
+<img width="1414" height="770" alt="output png" src="https://github.com/user-attachments/assets/d7192cce-4781-4c35-8a1c-f7c6e72d5ae2" />
+<img width="1326" height="751" alt="home png" src="https://github.com/user-attachments/assets/34499e51-cb78-4e0f-8a76-431089bea500" />
 
 
 
